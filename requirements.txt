@@ -1,0 +1,15 @@
+python-dotenv==1.0.0
+requests==2.31.0
+google-generativeai==0.3.2
+google-adk==0.1.0
+langchain==0.1.20
+langchain-community==0.0.38
+langchain-core==0.1.53
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+python-telegram-bot
+pytz
+APScheduler~=3.10.0
+tzlocal~=5.2
+openai>=1.12.0

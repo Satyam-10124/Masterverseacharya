@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: masterversacharya
+Version: 0.1.0
+Summary: A spiritual guidance assistant
+Author: Satyam Singhal
+Requires-Dist: google-adk
+Requires-Dist: google-generativeai
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

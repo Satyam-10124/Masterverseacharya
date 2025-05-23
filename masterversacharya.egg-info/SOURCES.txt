@@ -1,0 +1,10 @@
+README.md
+setup.py
+masterversacharya/__init__.py
+masterversacharya/agent.py
+masterversacharya/spiritual_api.py
+masterversacharya.egg-info/PKG-INFO
+masterversacharya.egg-info/SOURCES.txt
+masterversacharya.egg-info/dependency_links.txt
+masterversacharya.egg-info/requires.txt
+masterversacharya.egg-info/top_level.txt

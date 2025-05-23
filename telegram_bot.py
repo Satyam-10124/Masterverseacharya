@@ -3,8 +3,12 @@ import os
 import json
 import logging
 import requests
+from dotenv import load_dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, ContextTypes, filters
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -13,11 +17,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Telegram Bot Token (replace with your actual token)
-TELEGRAM_TOKEN = "8083432253:AAHhLk28C9qzBvUnzmd8rZP-8gPZD2PL5V0"
+# Telegram Bot Token (loaded from environment variable)
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 
-# MasterversAcharya API Configuration
-BASE_URL = "http://127.0.0.1:8000"  # Using localhost instead of 0.0.0.0
+# MasterversAcharya API Configuration (loaded from environment variable or default)
+BASE_URL = os.environ.get("MASTERVERSACHARYA_API_BASE_URL", "http://127.0.0.1:9876")
+
+# Check if TELEGRAM_TOKEN is set
+if not TELEGRAM_TOKEN:
+    logger.error("TELEGRAM_TOKEN not found. Please set it in your .env file or environment variables.")
+    exit(1)
 APP_NAME = "masterversacharya"
 
 # Configure request retry settings

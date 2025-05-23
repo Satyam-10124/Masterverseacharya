@@ -10,6 +10,7 @@ setup(
         "google-adk",
         "google-generativeai",
         "python-dotenv",
-        "requests"
+        "requests",
+        "python-telegram-bot~=22.1"
     ],
 )
